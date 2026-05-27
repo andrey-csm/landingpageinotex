@@ -1844,7 +1844,7 @@
 
     <!-- TRABALHE CONOSCO -->
     <div class="fade-up" style="margin-top:2.5rem;padding:2rem 2rem;border:1px solid rgba(21,88,176,0.25);border-top:2px solid var(--blue);border-radius:4px;background:rgba(21,88,176,0.04);display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:center;">
-      <div style="display:flex;align-items:flex-start;gap:1.25rem;">
+      <div style="display:flex;align-items:flex-start;gap:1.25rem;min-width:0;overflow:hidden;">
         <div style="width:48px;height:48px;flex-shrink:0;background:rgba(30,111,217,0.12);border:1px solid rgba(30,111,217,0.3);border-radius:3px;display:flex;align-items:center;justify-content:center;">
           <i class="fa-solid fa-hard-hat" style="color:var(--blue);font-size:1.1rem;"></i>
         </div>
@@ -1862,7 +1862,13 @@
         </a>
       </div>
     </div>
-    <style>@media(max-width:700px){#contato .fade-up[style*="grid-template-columns:1fr auto"]{grid-template-columns:1fr!important;} #contato .fade-up[style*="grid-template-columns:1fr auto"] > div:last-child{flex-direction:row!important;}}</style>
+    <style>
+      @media(max-width:768px){
+        #contato .fade-up[style*="grid-template-columns:1fr auto"]{grid-template-columns:1fr!important;overflow:hidden;}
+        #contato .fade-up[style*="grid-template-columns:1fr auto"] > div:last-child{flex-direction:row!important;flex-wrap:wrap;}
+        #contato .fade-up[style*="grid-template-columns:1fr auto"] p{word-break:break-word;overflow-wrap:break-word;}
+      }
+    </style>
 
   </div>
 </section>
